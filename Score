@@ -1,0 +1,16 @@
+# scores
+testCase = int(input())
+scoreList = [input() for i in range(testCase)]
+outPut = []
+for value in scoreList:
+    score = 0
+    cummulativeScore =0
+    for i in range(len(value)):
+        if value[i] == "O":
+            score+=1
+        else:
+            score = 0
+        cummulativeScore +=score
+    outPut.append(cummulativeScore)
+for val in outPut:
+    print(val)
