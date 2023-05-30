@@ -1,0 +1,27 @@
+#  sort vowel and consonant
+
+word = input()
+vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+vowel_indexes = []
+vowels_list = []
+consonants_list = []
+consonant_indexes = []
+for c in word:
+    if c in vowels:
+        vowel_indexes.append(word.index(c))
+        vowels_list.append(c)
+    else:
+        consonants_list.append(c)
+vowels_list.sort()
+consonants_list.sort()
+output = ""
+vowel_counter = 0
+consonant_counter = 0
+for i in range(len(word)):
+    if word[i] in vowels:
+        output+=vowels_list[vowel_counter]
+        vowel_counter+=1
+    else:
+        output+=consonants_list[consonant_counter]
+        consonant_counter+=1
+print(output)
