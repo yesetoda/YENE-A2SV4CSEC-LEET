@@ -1,0 +1,13 @@
+# Perfect Cyclic String
+test_case = int(input())
+output =[]
+inputs = [input() for i in range(test_case)]
+for value in inputs:
+    ind_score = []
+    for i in range(1,len(value)+1):
+        # print(value[:i]*(len(value)//(i)),value)
+        if(value[:i]*(len(value)//(i)) == value):
+            ind_score.append(i)
+    output.append(min(ind_score))
+for y in range(test_case):
+    print(output[y])
