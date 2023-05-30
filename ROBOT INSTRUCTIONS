@@ -1,1 +1,21 @@
-
+# ROBOT INSTRUCTIONS
+pos  =[]
+x = int(input())
+for i in range(x):
+    n = int(input())
+    instructions = []
+    position=0
+    for j in range(n):
+        ins = input().split()
+        if len(ins)==1:
+            instructions.append(ins[0])
+        else:
+            instructions.append(instructions[int(ins[2])-1])
+    for k in instructions:
+        if k =="LEFT":
+            position-=1
+        elif k=="RIGHT":
+            position+=1
+    pos.append(position)
+for l in pos:
+    print(l)
