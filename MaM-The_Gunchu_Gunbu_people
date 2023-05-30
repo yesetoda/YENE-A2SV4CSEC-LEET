@@ -1,0 +1,11 @@
+# The Gunchu Gunbu people
+
+import math
+name = input()
+name_sum = 0
+for value in name:
+    name_sum += ord(value)
+total_love = (int(math.floor(name_sum/100))+1)*100
+self_love = int(math.floor((name_sum/total_love)*100))
+
+print(str(100-self_love)+"%")
